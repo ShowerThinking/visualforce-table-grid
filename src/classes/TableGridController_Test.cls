@@ -132,8 +132,8 @@ public class TableGridController_Test {
          Profile p = [select id from profile where name=:pName]; 
          String rndTxt = rndTxt();
          User u = new User(alias = rndTxt, email=rndTxt+'@testorg.com', 
-              emailencodingkey='UTF-8', lastname='Testing', languagelocalekey='es_ES', 
-              localesidkey='es_ES', profileid = p.Id, 
+              emailencodingkey='UTF-8', lastname='Testing', languagelocalekey='en_US', 
+              localesidkey='en_US', profileid = p.Id, 
               timezonesidkey='America/Los_Angeles', username=rndTxt+'@testorg.com');
         insert u;     
         return u;            
