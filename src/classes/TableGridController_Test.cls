@@ -84,7 +84,7 @@ public class TableGridController_Test {
     // TEST HELPER
     
     @TestVisible
-    private final static String TESTUSER_PROFILE = 'U2G_TestUserProfile';
+    private final static String TESTUSER_PROFILE = 'System Administrator';
     @TestVisible
     private final static String ACCESSIBLE_SOBJECT = 'TableGridAccessible__c';
     @TestVisible
@@ -132,7 +132,7 @@ public class TableGridController_Test {
          Profile p = [select id from profile where name=:pName]; 
          String rndTxt = rndTxt();
          User u = new User(alias = rndTxt, email=rndTxt+'@testorg.com', 
-              emailencodingkey='UTF-8', lastname='Testing', languagelocalekey='en_US', 
+              emailencodingkey='UTF-8', lastname='Testing', languagelocalekey='es_ES', 
               localesidkey='en_US', profileid = p.Id, 
               timezonesidkey='America/Los_Angeles', username=rndTxt+'@testorg.com');
         insert u;     
