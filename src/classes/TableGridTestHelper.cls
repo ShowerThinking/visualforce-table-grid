@@ -30,7 +30,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *	Test Helper used by multiple Test classes
  */
 public class TableGridTestHelper {
-    final static String TESTUSER_PROFILE = 'U2G_TestUserProfile';
+    final static String TESTUSER_PROFILE = 'System Administrator';
     public final static String ACCESSIBLE_SOBJECT = 'TableGridAccessible__c';
     public final static String TEXT_FIELD = 'txt_TextField__c';
     public final static String INTEGER_FIELD = 'num_IntegerField__c';
@@ -67,8 +67,8 @@ public class TableGridTestHelper {
          Profile p = [select id from profile where name=:pName]; 
          String rndTxt = rndTxt();
          User u = new User(alias = rndTxt, email=rndTxt+'@testorg.com', 
-              emailencodingkey='UTF-8', lastname='Testing', languagelocalekey='en_US', 
-              localesidkey='en_US', profileid = p.Id, 
+              emailencodingkey='UTF-8', lastname='Testing', languagelocalekey='es_ES', 
+              localesidkey='es_ES', profileid = p.Id, 
               timezonesidkey='America/Los_Angeles', username=rndTxt+'@testorg.com');
         insert u;     
         return u;            
